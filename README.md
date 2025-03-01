@@ -1,1 +1,1 @@
-# crypto-bar
+# Crypto Bar
