@@ -15,7 +15,7 @@ func setMenuBar(app appkit.Application, tm *usecase.TickerManager) {
 
 	// Initial title
 	tickerPrice := tm.GetTickerPrice(tm.Symbols[0])
-	main.Button().SetTitle(tm.GetCurrSymbol() + "$" + tickerPrice)
+	main.Button().SetTitle(tickerPrice + " | " + tm.GetCurrSymbol())
 
 	// Setup the menu
 	menu := appkit.NewMenuWithTitle("main")
@@ -35,7 +35,7 @@ func setMenuBar(app appkit.Application, tm *usecase.TickerManager) {
 			fmt.Println("Current interval: ", tm.GetCurrInterval())
 
 			tickerPrice := tm.GetTickerPrice(tm.Symbols[0])
-			main.Button().SetTitle(tm.GetCurrSymbol() + "$" + tickerPrice)
+			main.Button().SetTitle(tickerPrice + " | " + tm.GetCurrSymbol())
 		}
 	}()
 }
